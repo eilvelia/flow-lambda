@@ -1,0 +1,17 @@
+[ignore]
+<PROJECT_ROOT>/dist/
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.use_strict=true
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe
+suppress_comment=\\(.\\|\n\\)*\\$FlowOff
+suppress_comment=\\(.\\|\n\\)*\\$ExpectError
+include_warnings=true
+
+[strict]

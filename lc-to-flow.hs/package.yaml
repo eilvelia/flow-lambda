@@ -1,0 +1,54 @@
+name:                lc-to-flow
+version:             0.1.0.0
+github:              "Bannerets/flow-lambda"
+license:             MIT
+author:              "Bannerets"
+maintainer:          "comonoid@protonmail.com"
+copyright:           "2019 Bannerets <comonoid@protonmail.com>"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: Please see the README on GitHub at <https://github.com/Bannerets/flow-lambda#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- megaparsec
+# - parser-combinators
+
+ghc-options:
+- -Wincomplete-patterns
+
+# library:
+#   source-dirs: src
+
+executables:
+  lc-to-flow:
+    main:                Main.hs
+    source-dirs:         src
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    # dependencies:
+    # - lc-to-flow
+
+# tests:
+#   lc-to-flow-test:
+#     main:                Spec.hs
+#     source-dirs:         test
+#     ghc-options:
+#     - -threaded
+#     - -rtsopts
+#     - -with-rtsopts=-N
+#     dependencies:
+#     - lc-to-flow
+#     - hspec
+#     - hspec-megaparsec

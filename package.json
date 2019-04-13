@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "name": "flow-lambda",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "flow:check": "flow check --include-warnings --max-warnings 0",
+    "build": "babel src/ -d dist/",
+    "test": "npm run flow:check",
+    "prepare": "npm run clean && npm run build",
+    "prepack": "npm test",
+    "start": "npm run build && node dist"
+  },
+  "files": [
+    ".flowconfig",
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-flow": "^7.0.0",
+    "flow-bin": "^0.97.0",
+    "rimraf": "^2.6.2"
+  },
+  "author": "Bannerets <comonoid@protonmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "flow",
+    "flowtype"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bannerets/flow-lambda.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bannerets/flow-lambda/issues"
+  },
+  "homepage": "https://github.com/Bannerets/flow-lambda#readme"
+}
